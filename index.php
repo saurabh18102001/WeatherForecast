@@ -329,7 +329,7 @@ function getWeather(city = null) {
         `;
 
         // Fetch 5-day weather forecast
-        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=b9340941cd57639aff5520ba54fe15e2`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=your_api_key`)
           .then((response) => response.json())
           .then((forecastData) => {
             let forecastHTML = "<h3>5-Day Forecast</h3><div style='display:flex; gap:10px; overflow-x:auto;'>";
@@ -376,7 +376,7 @@ function getWeather(city = null) {
               let lat = position.coords.latitude;
               let lon = position.coords.longitude;
               fetch(
-                `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=b9340941cd57639aff5520ba54fe15e2`
+                `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=your_api_key`
               )
                 .then((response) => response.json())
                 .then((data) => {
