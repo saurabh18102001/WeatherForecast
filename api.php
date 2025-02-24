@@ -2,7 +2,7 @@
 <?php
 header('Content-Type: application/json');
 
-$apiKey = "b9340941cd57639aff5520ba54fe15e2"; // Replace with your OpenWeatherMap API key
+$apiKey = "your_api_key"; // Replace with your OpenWeatherMap API key
 $input = isset($_GET['city']) ? trim($_GET['city']) : '';
 
 if (!$input) {
